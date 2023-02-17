@@ -36,7 +36,10 @@ export const theme = createTheme({
           },
         },
         sizeSmall: {
-          padding: '6px 16px'
+          padding: '6px 16px',
+          '& .MuiSvgIcon-root >*:nth-of-type(1)': {
+            fontSize: '24px' 
+          },
         },
         sizeMedium: {
           padding: '8px 8px'
