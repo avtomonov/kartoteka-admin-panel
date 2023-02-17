@@ -95,7 +95,7 @@ export const Reports = (props) => {
           <Grid item xs={12} sm={6.8}>
             <PerfectScrollbar>
               <Box sx={{
-                minWidth: '320px'
+                minWidth: '360px'
               }}>
                 <Table sx={{
                   marginLeft: '-10px',
