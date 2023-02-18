@@ -1,4 +1,4 @@
-import { Box, Card, CardContent, Grid, Typography, Link } from '@mui/material';
+import { Box, Card, CardContent, Grid, Typography, Link, CardHeader } from '@mui/material';
 import NextLink from 'next/link';
 
 
@@ -14,19 +14,16 @@ export const HarvestStatistics = (props) => (
     >
       <Card {...props} >
         <CardContent>
+          <CardHeader
+              title="Статистика урожая"
+              component="h2"
+          />
           <Grid
             container
             spacing={3}
             sx={{ justifyContent: 'space-between' }}
           >
             <Grid item>
-              <Typography
-                color="textPrimary"
-                gutterBottom
-                variant="overline"
-              >
-                Статистика урожая
-              </Typography>
               <Typography
                 color="textPrimary"
                 variant="subtitle1"

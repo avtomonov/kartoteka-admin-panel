@@ -1,4 +1,3 @@
-import { formatDistanceToNow, subHours } from 'date-fns';
 import { v4 as uuid } from 'uuid';
 import {
   Box,
@@ -11,10 +10,9 @@ import {
   ListItem,
   Typography
 } from '@mui/material';
-import ArrowRightIcon from '@mui/icons-material/ArrowRight';
-import MoreVertIcon from '@mui/icons-material/MoreVert';
 import { Phone as PhoneIcon } from '../../icons/phone';
 import { Email as EmailIcon } from '../../icons/email';
+import NextLink from 'next/link';
 
 
 const users = [
@@ -50,7 +48,7 @@ export const Staff = (props) => (
         sx={{
           paddingBottom: {
             xs: 8,
-            lg: 0
+            lg: '40px'
           }
         }}
       >
@@ -84,7 +82,6 @@ export const Staff = (props) => (
                 color="textSecondary"
                 variant="subtitle1"
                 component="p"
-
               >
                 {user.role}
               </Typography>
@@ -128,19 +125,24 @@ export const Staff = (props) => (
         </ListItem>
       ))}
     </List>
-    <Link
-      href="#"
-      color="secondary"
-      variant="body6"
-      underline="none"
-      sx={{ 
-        position: 'absolute',
-        left: '20px',
-        bottom: '26px' 
-      }} 
+    <NextLink
+      href="/staff"
+      passHref
     >
-      Показать еще
-    </Link>
+      <Link
+        href="/staff"
+        color="secondary"
+        variant="body6"
+        underline="none"
+        sx={{ 
+          position: 'absolute',
+          left: '20px',
+          bottom: '26px' 
+        }} 
+      >
+        Показать еще
+      </Link>
+    </NextLink>
     </CardContent>
   </Card>
 );

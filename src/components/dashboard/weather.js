@@ -1,4 +1,4 @@
-import { Card, CardContent, Grid, Typography, Paper, Box, Link  } from '@mui/material';
+import { Card, CardContent, Grid, Typography, Paper, CardHeader, Link  } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import NextLink from 'next/link';
 
@@ -30,15 +30,10 @@ export const Weather = (props) => (
             justifyContent: 'space-between' 
           }}
         >
-          <Typography
-            color="textPrimary"
-            gutterBottom
-            variant="overline"
-            mb='0'
-          >
-            Погода в Курской области
-          </Typography>
-
+          <CardHeader
+              title="Погода в Курской области"
+              component="h2"
+          />
           <Grid container spacing={0} sx={{ pt: 0 }}>
             <Grid container sx={{ pb: 1.4, flexWrap: 'nowrap' }}>
               <Grid item xs={6.4} xl={8}>

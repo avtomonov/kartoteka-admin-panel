@@ -1,10 +1,9 @@
-import { Box, Card, CardContent, Grid, Typography, Link} from '@mui/material';
+import { Box, Card, CardContent, Grid, Typography, Link, CardHeader} from '@mui/material';
 import NextLink from 'next/link';
 
 export const Work = (props) => (
   <NextLink
     href="/notes"
-    
     passHref
   >
     <Link
@@ -17,21 +16,10 @@ export const Work = (props) => (
         {...props}
       >
         <CardContent>
-          <Grid
-            container
-            spacing={3}
-            sx={{ justifyContent: 'space-between' }}
-          >
-            <Grid item>
-              <Typography
-                color="textPrimary"
-                gutterBottom
-                variant="overline"
-              >
-                Работа с полями
-              </Typography>
-            </Grid>
-          </Grid>
+          <CardHeader
+            title="Работа с полями"
+            component="h2"
+          />
           <Box
             sx={{
               display: 'flex',
@@ -48,11 +36,11 @@ export const Work = (props) => (
             }}
           >
             <img
-                alt='Поля с уражаем'
-                src='/static/images/harvest.svg'
-                width='187'
-                height='148'
-              />
+              alt='Поля с уражаем'
+              src='/static/images/harvest.svg'
+              width='187'
+              height='148'
+            />
           </Box>
         </CardContent>
       </Card>

@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { ListItem, List } from '@mui/material';
+import { List } from '@mui/material';
 
 export const ListSquare = (props) => {
   const { items, ...others } = props;
