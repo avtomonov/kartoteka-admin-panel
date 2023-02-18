@@ -6,19 +6,15 @@ export const Structure = (props) => {
     const { structures, ...others } = props;
   
     return (
-        <Card {...props}>      
+        <Card>      
             <CardContent>
                 <CardHeader
                     component="h2"
                     title="Структура предприятия"
                 />
-
-                <div>
                     {structures.map((item, index) => (
                         <SimpleAccordion key={index} item={item} />
                     ))}
-                </div>
-
             </CardContent>
         </Card>
     );

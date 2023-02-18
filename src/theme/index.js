@@ -69,8 +69,16 @@ export const theme = createTheme({
     MuiCard: {
       styleOverrides: {
         root: {
-          height: '100%',
-          position: 'relative'
+          minHeight: '100%',
+          position: 'relative',
+          
+          '+ .MuiCard-root': {
+            marginTop: '30px',
+            minHeight: 'auto'
+          },
+          '&.MuiCard-root:has(+ .MuiCard-root)': {
+            minHeight: 'auto'
+          }
         }
       }
     },
@@ -207,8 +215,18 @@ export const theme = createTheme({
           }
         }
       }
-    }
+    },
+    MuiInputBase:{
+      styleOverrides: {
+        root: {
+          '.MuiInputBase-input::placeholder' : {
+            opacity: '1 !important',
+          }
+        }
+      }
+    },
   },
+  
   palette: {
     neutral: {
       100: '#F3F4F6',

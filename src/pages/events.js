@@ -1,6 +1,8 @@
 import Head from 'next/head';
 import { Box, Container, Grid } from '@mui/material';
 import { Structure } from '../components/events/structure';
+import { ListActions } from '../components/events/list-actions';
+import { Decision } from '../components/events/decision';
 import { DashboardLayout } from '../components/dashboard-layout';
 
 const structures = [
@@ -43,6 +45,21 @@ const structures = [
   }
 ]
 
+const actions = [
+  {
+    title: 'Справка проверки',
+    href: '#TODO'
+  },
+  {
+    title: 'Акт проверки',
+    href: '#TODO'
+  },
+  {
+    title: 'Схема проверки',
+    href: '#TODO'
+  }
+]
+
 const Page = () => (
   <>
     <Head>
@@ -75,6 +92,7 @@ const Page = () => (
       >
         <Grid
           container
+          spacing={3.75}
         >
           <Grid
             item
@@ -89,15 +107,16 @@ const Page = () => (
             md={6}
             xs={12}
           >
-            <Structure structures={structures}/>
-            <Structure structures={structures}/>
+            <ListActions 
+              list={actions}
+            />
+            <Decision/>
           </Grid>
         </Grid>
       </Container>
     </Box>
   </>
 );
-
 
 Page.getLayout = (page) => (
   <DashboardLayout>
