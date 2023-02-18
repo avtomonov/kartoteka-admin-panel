@@ -63,7 +63,7 @@ const Page = () => (
             sm={6}
             xs={12}
           >
-            <HarvestStatistics sx={{ height: '100%' }} />
+            <HarvestStatistics sx={{ height: '100%', minHeight: '230px' }} />
           </Grid>
           <Grid
             item
@@ -89,7 +89,7 @@ const Page = () => (
             sm={12}
             xs={12}
           >
-            <Staff sx={{ height: '100%' }} />
+            <Staff sx={{ height: '100%' , minHeight: '230px'}} />
           </Grid>
           <Grid
             item

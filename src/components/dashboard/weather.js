@@ -12,7 +12,6 @@ const Item = styled(Paper)(({ theme }) => ({
 export const Weather = (props) => (
   <NextLink
     href="/weather"
-    ariaLabel="Погода"
     passHref
   >
     <Link

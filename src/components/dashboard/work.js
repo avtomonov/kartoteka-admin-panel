@@ -11,7 +11,6 @@ export const Work = (props) => (
       component="a"
       href="/notes"
       underline="none"
-      ariaLabel="Работа с полями"
     >
       <Card
         sx={{ height: '100%' }}

@@ -143,7 +143,10 @@ export const Reports = (props) => {
           <Grid item xs={12} sm={5.2}>
             <Box
               sx={{
-                height: 184,
+                height: {
+                  xs: 180,
+                  sm: '79.66%'
+                },
                 position: {
                   xs: 'relative',
                   sm: 'absolute'

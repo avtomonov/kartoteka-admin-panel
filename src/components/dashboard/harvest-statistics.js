@@ -5,7 +5,6 @@ import NextLink from 'next/link';
 export const HarvestStatistics = (props) => (
   <NextLink
     href="/statistics"
-    ariaLabel="Статистика урожая"
     passHref
   >
     <Link

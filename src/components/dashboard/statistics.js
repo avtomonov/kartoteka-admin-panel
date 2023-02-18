@@ -75,11 +75,11 @@ export const Statistics = (props) => {
           />
 
           <Grid container spacing={2}>
-            <Grid item xs={12} sm="5" md={5.4}>
+            <Grid item xs={12} md={5.4}>
               <ListSquare items={listItems} />
             </Grid>
 
-            <Grid item xs={12} sm="5" md={5.3176} >
+            <Grid item xs={12} md={5.3176} >
               <Box
                 sx={{
                   height: '100%',
