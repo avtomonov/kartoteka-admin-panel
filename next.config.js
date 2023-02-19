@@ -1,17 +1,19 @@
 module.exports = {
-  reactStrictMode: true,
-  webpack: (config) => {
-    // Unshift polyfills in main entrypoint.
+  webpack: function (config) {
     const originalEntry = config.entry;
+
     config.entry = async () => {
       const entries = await originalEntry();
-      if (entries['_app.js']) {
-        entries['_app.js'].unshift('./src/polyfills.js'); 
+
+      if (
+        entries["main.js"] &&
+        !entries["main.js"].includes("./src/polyfills.js")
+      ) {
+        entries["main.js"].unshift("./src/polyfills.js");
       }
       return entries;
     };
 
     return config;
-  }
-
+  },
 };

@@ -19,29 +19,29 @@ export const DashboardNavbar = (props) => {
   const [openAccountPopover, setOpenAccountPopover] = useState(false);
 
   const onScrollHeader = () => { // объявляем основную функцию onScrollHeader
-    const header = document.querySelector('.js-collapse-header') // находим header и записываем в константу
+    // const header = document.querySelector('.js-collapse-header') // находим header и записываем в константу
 
-    if (header) {
-      let prevScroll = window.pageYOffset // узнаем на сколько была прокручена страница ранее
-      let currentScroll // на сколько прокручена страница сейчас (пока нет значения)
+    // if (header) {
+    //   let prevScroll = window.pageYOffset // узнаем на сколько была прокручена страница ранее
+    //   let currentScroll // на сколько прокручена страница сейчас (пока нет значения)
 
-      window.addEventListener('scroll', () => { // при прокрутке страницы
+    //   window.addEventListener('scroll', () => { // при прокрутке страницы
 
-        currentScroll = window.pageYOffset // узнаем на сколько прокрутили страницу
+    //     currentScroll = window.pageYOffset // узнаем на сколько прокрутили страницу
 
-        const headerHidden = () => header.classList.contains('header--collapsed') // узнаем скрыт header или нет
+    //     const headerHidden = () => header.classList.contains('header--collapsed') // узнаем скрыт header или нет
 
-        if (currentScroll > prevScroll && !headerHidden()) { // если прокручиваем страницу вниз и header не скрыт
-          header.classList.add('header--collapsed') // то скрываем header
-        }
+    //     if (currentScroll > prevScroll && !headerHidden()) { // если прокручиваем страницу вниз и header не скрыт
+    //       header.classList.add('header--collapsed') // то скрываем header
+    //     }
 
-        if (currentScroll < prevScroll && headerHidden() && currentScroll == 0) { // если прокручиваем страницу вверх и header скрыт
-          header.classList.remove('header--collapsed') // то отображаем header
-        }
+    //     if (currentScroll < prevScroll && headerHidden() && currentScroll == 0) { // если прокручиваем страницу вверх и header скрыт
+    //       header.classList.remove('header--collapsed') // то отображаем header
+    //     }
   
-        prevScroll = currentScroll // записываем на сколько прокручена страница на данный момент
-      })
-    }
+    //     prevScroll = currentScroll // записываем на сколько прокручена страница на данный момент
+    //   })
+    // }
   }
 
   onScrollHeader() // вызываем основную функцию onScrollHeader

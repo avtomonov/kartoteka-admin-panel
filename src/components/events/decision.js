@@ -65,7 +65,6 @@ export const Decision = (props) => {
                         placeholder="Введите текст"
                         multiline
                         rows={2}
-                        maxRows={2}
                         fullWidth
                         variant="filled"
                         focused 
