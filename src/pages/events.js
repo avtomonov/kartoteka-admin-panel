@@ -109,6 +109,11 @@ const Page = () => (
             item
             md={6}
             xs={12}
+
+            sx={{
+              display: 'flex',
+              flexDirection: 'column'
+            }}
           >
             <ListActions 
               list={actions}

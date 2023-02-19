@@ -65,7 +65,7 @@ export const SimpleAccordion = (props) => {
               {/* TODO endings */}
               <ListItem>
                 <ProfileIcon fontSize="small" /> 
-                  { item.personnelCount } сотрудника
+                { item.personnelCount } сотрудника
               </ListItem>
             </List>
           </Box>

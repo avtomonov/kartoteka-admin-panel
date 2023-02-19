@@ -1,5 +1,5 @@
 import { Card, Box, TextField, CardContent, Divider, MenuItem, Button } from '@mui/material';
-
+import { ArrowDown as ArrowDownIcon } from '../../icons/arrow-down';
 
 
 const controls = [
@@ -45,8 +45,14 @@ export const Decision = (props) => {
     }
   
     return (
-        <Card>      
-            <CardContent>
+        <Card
+            sx={{
+                flex: '1'
+            }}
+        >      
+            <CardContent
+                className="card-variant"
+            >
                 <Box
                     component="form"
                     noValidate
@@ -77,51 +83,71 @@ export const Decision = (props) => {
                         fullWidth
                         variant="filled"
                     />
-                    <TextField
-                        id="type"
-                        select
-                        label="Вид проверки"
-                        defaultValue="plans"
-                        fullWidth
-                        variant="filled"
-                        focused 
+
+                    <Box
+                        sx={{
+                            maxWidth: {
+                                xs: '100%',
+                                md: '303px'
+                            }
+                        }}
                     >
-                        {controls.map((option) => (
-                            <MenuItem key={option.value} value={option.value}>
-                                {option.label}
-                            </MenuItem>
-                        ))}
-                    </TextField>
-                    <TextField
-                        id="control"
-                        select
-                        label="Форма проверки"
-                        defaultValue="out"
-                        fullWidth
-                        variant="filled"
-                        focused 
-                    >
-                        {controlTypes.map((option) => (
-                            <MenuItem key={option.value} value={option.value}>
-                                {option.label}
-                            </MenuItem>
-                        ))}
-                    </TextField>
-                    <TextField
-                        id="control-method"
-                        select
-                        label="Метод проверки"
-                        defaultValue="fact"
-                        fullWidth
-                        variant="filled"
-                        focused 
-                    >
-                        {controlMethods.map((option) => (
-                            <MenuItem key={option.value} value={option.value}>
-                                {option.label}
-                            </MenuItem>
-                        ))}
-                    </TextField>
+                        {/* TODO create custom select component */}
+                        <TextField
+                            id="type"
+                            select
+                            label="Вид проверки"
+                            defaultValue="plans"
+                            fullWidth
+                            variant="filled"
+                            focused 
+                            SelectProps={{
+                                IconComponent: () => <ArrowDownIcon />,
+                            }}
+                        >
+                            {controls.map((option) => (
+                                <MenuItem key={option.value} value={option.value}>
+                                    {option.label}
+                                </MenuItem>
+                            ))}
+                        </TextField>
+                        <TextField
+                            id="control"
+                            select
+                            label="Форма проверки"
+                            defaultValue="out"
+                            fullWidth
+                            variant="filled"
+                            focused 
+                            SelectProps={{
+                                IconComponent: () => <ArrowDownIcon />,
+                            }}
+                        >
+                            {controlTypes.map((option) => (
+                                <MenuItem key={option.value} value={option.value}>
+                                    {option.label}
+                                </MenuItem>
+                            ))}
+                        </TextField>
+                        <TextField
+                            id="control-method"
+                            select
+                            label="Метод проверки"
+                            defaultValue="fact"
+                            fullWidth
+                            variant="filled"
+                            focused 
+                            SelectProps={{
+                                IconComponent: () => <ArrowDownIcon />,
+                            }}
+                        >
+                            {controlMethods.map((option) => (
+                                <MenuItem key={option.value} value={option.value}>
+                                    {option.label}
+                                </MenuItem>
+                            ))}
+                        </TextField>
+                    </Box>
 
                     <TextField
                         id="control-period"
@@ -130,6 +156,13 @@ export const Decision = (props) => {
                         fullWidth
                         variant="filled"
                         focused 
+                        sx={{
+                            textAlign: 'center',
+                            maxWidth: {
+                                xs: '100%',
+                                md: '194px'
+                            }
+                        }}
                     />
 
                     <TextField
@@ -152,7 +185,7 @@ export const Decision = (props) => {
                         sx={{
                             display: 'flex',
                             justifyContent: 'center',
-                            margin: '20px 0 4px'
+                            padding: '5px 0 4px'
                         }}
                     >
                         <Button 

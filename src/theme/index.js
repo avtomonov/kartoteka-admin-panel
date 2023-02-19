@@ -97,10 +97,7 @@ export const theme = createTheme({
             minHeight: 'auto'
           },
 
-          '.MuiDivider-root': {
-            marginLeft: '-20px',
-            marginRight: '-20px',
-          }
+         
         }
       }
     },
@@ -110,12 +107,31 @@ export const theme = createTheme({
           padding: '24px 20px',
           height: '100%',
           backgroundColor: '#383E57',
+
           '&:last-child': {
             paddingBottom: '20px',
           },
           '.MuiAccordion-root, .MuiAccordion-root.Mui-expanded': {
             margin: '0 -20px'
           },
+          '.MuiDivider-root': {
+            marginLeft: '-20px',
+            marginRight: '-20px',
+          },
+          // '&.card-variant':{
+          //   opacity: '0.3',
+          //   sm: {
+          //     padding: '24px 20px',
+          //   },
+          //   md: {
+          //     opacity: 0,
+          //     padding: '24px 30px',
+          //   }
+          // },
+          // '&.card-variant .MuiDivider-root': {
+          //   marginLeft: '-30px',
+          //   marginRight: '-30px',
+          // },
         }
       }
     },
@@ -177,14 +193,38 @@ export const theme = createTheme({
         root: {
           background: '#3E4459',
           padding: 0,
+          color: '#C4C4C4',
 
           '&:after, &:before': {
             display: 'none',
           },
 
           '.MuiInputBase-input': {
-            padding: '7px 10px'
+            padding: '6px 10px',
+
+            '&:focus': {
+              background: '#43E8FF',
+              borderRadius: '4px',
+              color: '#23273A',
+
+              '+ input + .MuiSvgIcon-root': {
+                color: '#23273A',
+              }
+            },
+
+            '&[aria-expanded="true"]': {
+              background: '#43E8FF',
+              borderRadius: '4px',
+              color: '#23273A',
+
+              '+ input + .MuiSvgIcon-root': {
+                color: '#23273A',
+                transform: 'rotate(180deg)'
+              }
+            }
           },
+
+          
         }
       }
     },
@@ -209,6 +249,14 @@ export const theme = createTheme({
       styleOverrides: {
         root: {
           marginBottom: '16px',
+
+          '.MuiSvgIcon-root': {
+            position: 'absolute',
+            right: '15px',
+            fontSize: '14px',
+            pointerEvents: 'none'
+          },
+      
         }
       }
     },
@@ -220,31 +268,53 @@ export const theme = createTheme({
           borderRadius: '5px',
           padding: 0,
 
-          // '&:after, &:before': {
-          //   display: 'none',
-          // },
-
           '&.Mui-focused': {
             backgroundColor: '#3E4459',
           },
 
-          // '.MuiInputLabel-root': {
-          //   position: 'relative',
-          // }
+          '.MuiSelect-select': {
+            paddingRight: '50px',
+          }
         }
       }
     },
-    // MuiOutlinedInput: {
-    //   styleOverrides: {
-    //     notchedOutline: {
-    //       borderColor: '#E6E8F0',
+    MuiPaper: {
+      styleOverrides: {
+        root: {
 
-    //       '.Mui-focused': {
-    //         backgroundColor: 'transparent'
-    //       }
-    //     }
-    //   }
-    // },
+          '&.MuiMenu-paper': {
+            borderRadius: '4px',
+            marginTop: '4px',
+            boxShadow: '7px 7px 8px rgba(0, 0, 0, 0.15)',
+            border: '1px solid #151E41',
+
+            '.Mui-selected':{
+              background: 'rgba(255, 255, 255, 0.12)'
+            },
+
+            '.Mui-selected:hover': {
+              background: '#43E8FF',
+              color: '#23273A'
+            }
+            
+          },
+
+          '.MuiMenuItem-root':{
+            background: 'rgba(255, 255, 255, 0.12)',
+            borderBottom: '1px solid #151E41',
+
+            '&:last-child': {
+              border: 0
+            }
+          },
+
+          '.MuiMenuItem-root:hover': {
+            background: '#43E8FF',
+            color: '#23273A'
+          },
+        }
+      }
+    },
     MuiTableHead: {
       styleOverrides: {
         root: {
@@ -305,7 +375,7 @@ export const theme = createTheme({
     MuiAccordionSummary: {
       styleOverrides: {
         root: {
-          padding:'26px 0',
+          padding:'20px 0',
           borderTop: '1px',
           borderBottom: '1px',
           borderColor: '#151E41',
