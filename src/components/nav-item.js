@@ -28,7 +28,7 @@ export const NavItem = (props) => {
           startIcon={icon}
           disableRipple
           sx={{
-            backgroundColor: active && '#43E8FF;',
+            background: active && 'linear-gradient(90deg, rgba(50,230,255,1) 50%, rgba(67,232,255,1) 100%)',
             color: active ? 'primary.dark' : 'neutral.300',
             width: '100%',
             px: '11px',

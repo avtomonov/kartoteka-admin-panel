@@ -47,7 +47,7 @@ export const Decision = (props) => {
     return (
         <Card
             sx={{
-                flex: '1'
+                flex: '1',
             }}
         >      
             <CardContent

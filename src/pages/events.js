@@ -71,57 +71,29 @@ const Page = () => (
       </title>
     </Head>
     <Box component="main">
-      <Container 
-        maxWidth={false}
-        disableGutters={true}
-        sx={{
-          flexGrow: 1,
-          py: {
-            xs: 2,
-            sm: 4,
-            md: 7,
-            lg: 0
-          },
-          pr: {
-            xs: 3.75,
-            lg: 5, 
-            x: 10, 
-          },
-          pl: {
-            xs: 3.75,
-            lg: 5
-          }
-        }}  
+      <Grid
+        container
+        spacing={3.75}
       >
         <Grid
-          container
-          spacing={3.75}
+          item
+          md={6}
+          xs={12}
         >
-          <Grid
-            item
-            md={6}
-            xs={12}
-          >
-            <Structure structures={structures}/>
-          </Grid>
-
-          <Grid
-            item
-            md={6}
-            xs={12}
-
-            sx={{
-              // display: 'flex',
-              // flexDirection: 'column'
-            }}
-          >
-            <ListActions 
-              list={actions}
-            />
-            <Decision/>
-          </Grid>
+          <Structure structures={structures}/>
         </Grid>
-      </Container>
+
+        <Grid
+          item
+          md={6}
+          xs={12}
+        >
+          <ListActions 
+            list={actions}
+          />
+          <Decision/>
+        </Grid>
+      </Grid>
     </Box>
   </>
 );

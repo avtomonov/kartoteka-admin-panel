@@ -14,30 +14,9 @@ const Page = () => (
     <Box
       component="main"
     >
-      <Container  
-        maxWidth={false}
-        disableGutters={true}
-        sx={{
-            py: {
-            xs: 2,
-            sm: 4,
-            md: 7,
-            lg: 0
-          },
-          pr: {
-            xs: 3.75,
-            lg: 5, 
-            x: 10, 
-          },
-          pl: {
-            xs: 3.75,
-            lg: 5
-          }
-        }}  >
-        <Box >
-          <OrganizationListResults organizations={organizations} />
-        </Box>
-      </Container>
+      <Box>
+        <OrganizationListResults organizations={organizations} />
+      </Box>
     </Box>
   </>
 );

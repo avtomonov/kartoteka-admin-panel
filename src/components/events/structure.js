@@ -10,7 +10,7 @@ export const Structure = (props) => {
             <CardContent
                 sx={{
                     paddingBottom: 0,
-                    paddingTop: '33px',
+                    paddingTop: '29px',
                     '&:last-child': {
                         paddingBottom: 0,
                     }
@@ -23,7 +23,7 @@ export const Structure = (props) => {
                         variant: "body5"
                     }}
                     sx={{
-                        marginBottom: '33px'
+                        marginBottom: '29px'
                     }}
                 />
                     {structures.map((item, index) => (

@@ -16,26 +16,12 @@ const Page = () => (
         py: 8
       }}
     >
-      <Container
-        maxWidth={false}
-        disableGutters={true}
-        sx={{
-            flexGrow: 1,
-            py: 0,
-            pr: {
-                xs: 3.75, 
-                lg: 10, 
-            },
-            pl: 5
-        }}  
+      <Typography
+        sx={{ mb: 3 }}
+        variant="h4"
       >
-        <Typography
-          sx={{ mb: 3 }}
-          variant="h4"
-        >
-          Настройки
-        </Typography>
-      </Container>
+        Настройки
+      </Typography>
     </Box>
   </>
 );

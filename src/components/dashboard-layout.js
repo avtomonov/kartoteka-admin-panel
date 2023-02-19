@@ -1,7 +1,6 @@
 import { useState } from 'react';
-import { Box } from '@mui/material';
+import { Box, Container } from '@mui/material';
 import { styled } from '@mui/material/styles';
-import { AuthGuard } from './auth-guard';
 import { DashboardNavbar } from './dashboard-navbar';
 import { DashboardSidebar } from './dashboard-sidebar';
 
@@ -32,7 +31,32 @@ export const DashboardLayout = (props) => {
             width: '100%'
           }}
         >
+        <Container 
+            maxWidth={false}
+            disableGutters={true}
+            sx={{
+              flexGrow: 1,
+              py: {
+                xs: 3,
+                sm: 4,
+                md: 7,
+                lg: 0
+              },
+              pr: {
+                xs: 2,
+                sm: 3.75,
+                lg: 5, 
+                x: 10, 
+              },
+              pl: {
+                xs: 2,
+                sm: 3.75,
+                lg: 5
+              }
+            }}  
+          >
           {children}
+          </Container>
         </Box>
       </DashboardLayoutRoot>
       <DashboardNavbar onSidebarOpen={() => setSidebarOpen(true)} />

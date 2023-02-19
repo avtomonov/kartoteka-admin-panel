@@ -6,7 +6,7 @@ export const ListActions = (props) => {
   
     return (
         <Card>      
-            <CardContent>
+            <CardContent className="card-variant--2">
                 <List className="list-actions">
                     {list.map((item, index) => (
                         <li className="list-actions__item" key={index}>

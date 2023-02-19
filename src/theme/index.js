@@ -31,10 +31,15 @@ export const theme = createTheme({
             fontSize: '24px' 
           },
           '&.MuiButton-containedDefault:hover': {
-            color: '#23273A'
+            color: '#23273A',
+            backgroundColor: '#FFFFFF'
           },
           '&.Mui-expanded': {
             minHeight: 'auto'
+          },
+
+          '&.Mui-focusVisible': {
+            outline: '1px solid #FFFFFF'
           }
         },
         sizeSmall: {
@@ -68,11 +73,6 @@ export const theme = createTheme({
           fontSize: '14px',
           lineHeight: '19px'
         }
-      }
-    },
-    MuiButtonBase: {
-      defaultProps: {
-        disableRipple: true
       }
     },
     MuiDivider: {
@@ -118,20 +118,28 @@ export const theme = createTheme({
             marginLeft: '-20px',
             marginRight: '-20px',
           },
-          // '&.card-variant':{
-          //   opacity: '0.3',
-          //   sm: {
-          //     padding: '24px 20px',
-          //   },
-          //   md: {
-          //     opacity: 0,
-          //     padding: '24px 30px',
-          //   }
-          // },
-          // '&.card-variant .MuiDivider-root': {
-          //   marginLeft: '-30px',
-          //   marginRight: '-30px',
-          // },
+
+          '&.card-variant':{
+           '@media(min-width: 1200px)': {
+            padding: '24px 30px',
+
+            '.MuiDivider-root': {
+              marginLeft: '-30px',
+              marginRight: '-30px',
+            },
+           }
+          },
+
+           '&.card-variant--2':{
+            '@media(min-width: 1200px)': {
+              padding: '20px 22px 20px 30px',
+  
+              '.MuiDivider-root': {
+                marginLeft: '-30px',
+                marginRight: '-30px',
+              }
+            }
+          }
         }
       }
     },
@@ -286,7 +294,7 @@ export const theme = createTheme({
             borderRadius: '4px',
             marginTop: '4px',
             boxShadow: '7px 7px 8px rgba(0, 0, 0, 0.15)',
-            border: '1px solid #151E41',
+            outline: '1px solid #151E41',
 
             '.Mui-selected':{
               background: 'rgba(255, 255, 255, 0.12)'
@@ -302,6 +310,7 @@ export const theme = createTheme({
           '.MuiMenuItem-root':{
             background: 'rgba(255, 255, 255, 0.12)',
             borderBottom: '1px solid #151E41',
+            padding: '7px 10px',
 
             '&:last-child': {
               border: 0
