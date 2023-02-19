@@ -47,7 +47,7 @@ export const Statistics = (props) => {
           <CardHeader
             component="h2"
             sx={{
-              marginBottom: '10px',
+              marginBottom: '12px',
               paddingRight: '120px',
 
               '.MuiCardHeader-action':{

@@ -1,0 +1,21 @@
+.list-actions {
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__delimetr {
+        border: 1px solid #FFFFFF;
+        border-bottom-width: thin;
+        flex: 1;
+        margin: 0 10px;
+        position: relative;
+        top: 5px;
+    }
+}

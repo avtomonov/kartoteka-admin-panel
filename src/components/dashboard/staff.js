@@ -38,17 +38,18 @@ export const Staff = (props) => (
       <CardHeader
         subtitle={`${users.length} in total`}
         title="Сотрудники"
-        sx={{
-          paddingBottom: '5px',
-        }}
         component="h2"
       />
 
       <List
         sx={{
-          paddingBottom: {
+          marginBottom: {
             xs: 8,
             lg: '40px'
+          },
+          marginTop: {
+            xs: 8,
+            lg: '10px'
           }
         }}
       >

@@ -14,7 +14,7 @@ export const theme = createTheme({
     }
   },
   components: {
-    MuiButton: {
+    MuiButton: { 
       defaultProps: {
         disableElevation: true
       },
@@ -30,10 +30,12 @@ export const theme = createTheme({
           '& .MuiSvgIcon-root': {
             fontSize: '24px' 
           },
-          '&:hover': {
-            backgroundColor: 'rgba(255,255,255, 0.08)',
-            color: '#ffffff',
+          '&.MuiButton-containedDefault:hover': {
+            color: '#23273A'
           },
+          '&.Mui-expanded': {
+            minHeight: 'auto'
+          }
         },
         sizeSmall: {
           padding: '6px 16px',
@@ -44,11 +46,18 @@ export const theme = createTheme({
         sizeMedium: {
           padding: '8px 8px'
         },
+        sizeDefault: {
+          borderRadius: '6px',
+          padding: '7px 30px',
+          fontWeight: '600',
+          fontSize: '16px',
+          lineHeight: '22px'
+        },
         sizeLarge: {
           padding: '11px 6px'
         },
         textSizeSmall: {
-          padding: '7px 12px'
+          padding: '7px 12px',
         },
         textSizeMedium: {
           padding: '10.25px 6px'
@@ -66,6 +75,13 @@ export const theme = createTheme({
         disableRipple: true
       }
     },
+    MuiDivider: {
+      styleOverrides: {
+        root: {
+          borderColor: '#151E41',
+        }
+      }
+    },
     MuiCard: {
       styleOverrides: {
         root: {
@@ -76,13 +92,18 @@ export const theme = createTheme({
             marginTop: '30px',
             minHeight: 'auto'
           },
+
           '&.MuiCard-root:has(+ .MuiCard-root)': {
             minHeight: 'auto'
+          },
+
+          '.MuiDivider-root': {
+            marginLeft: '-20px',
+            marginRight: '-20px',
           }
         }
       }
     },
-    
     MuiCardContent: {
       styleOverrides: {
         root: {
@@ -90,11 +111,15 @@ export const theme = createTheme({
           height: '100%',
           backgroundColor: '#383E57',
           '&:last-child': {
-            paddingBottom: '20px'
-          }
+            paddingBottom: '20px',
+          },
+          '.MuiAccordion-root, .MuiAccordion-root.Mui-expanded': {
+            margin: '0 -20px'
+          },
         }
       }
     },
+
     MuiCardHeader: {
       defaultProps: {
         titleTypographyProps: {
@@ -106,10 +131,15 @@ export const theme = createTheme({
       },
       styleOverrides: {
         root: {
-          padding: '0'
+          padding: '0',
+
+          '+ .MuiDivider-root': {
+            marginTop: '30px'
+          }
         }
       }
     },
+
     MuiCssBaseline: {
       styleOverrides: {
         '*': {
@@ -141,17 +171,83 @@ export const theme = createTheme({
         }
       }
     },
-    MuiOutlinedInput: {
+
+    MuiInputBase: {
       styleOverrides: {
-        notchedOutline: {
-          borderColor: '#E6E8F0'
+        root: {
+          background: '#3E4459',
+          padding: 0,
+
+          '&:after, &:before': {
+            display: 'none',
+          },
+
+          '.MuiInputBase-input': {
+            padding: '7px 10px'
+          },
         }
       }
     },
+
+    MuiFormLabel: {
+      styleOverrides: {
+        root: {
+          lineHeight: '19px',
+          position: 'relative',
+
+          '&.Mui-focused': {
+            transform: 'none',
+            position: 'relative',
+            marginBottom: '6px',
+            userSelect: 'initial',
+          }
+        }
+      }
+    },
+
+    MuiFormControl: {
+      styleOverrides: {
+        root: {
+          marginBottom: '16px',
+        }
+      }
+    },
+    MuiFilledInput: {
+      styleOverrides: {
+        root: {
+          borderColor: '#E6E8F0',
+          backgroundColor: '#3E4459',
+          borderRadius: '5px',
+          padding: 0,
+
+          // '&:after, &:before': {
+          //   display: 'none',
+          // },
+
+          '&.Mui-focused': {
+            backgroundColor: '#3E4459',
+          },
+
+          // '.MuiInputLabel-root': {
+          //   position: 'relative',
+          // }
+        }
+      }
+    },
+    // MuiOutlinedInput: {
+    //   styleOverrides: {
+    //     notchedOutline: {
+    //       borderColor: '#E6E8F0',
+
+    //       '.Mui-focused': {
+    //         backgroundColor: 'transparent'
+    //       }
+    //     }
+    //   }
+    // },
     MuiTableHead: {
       styleOverrides: {
         root: {
-
           '& .MuiTableCell-root': {
             borderBottom: '1px solid #151E41',
             borderRight: 'none',
@@ -199,6 +295,66 @@ export const theme = createTheme({
         }
       }
     },
+    MuiAccordionDetails: {
+      styleOverrides: {
+        root: {
+          padding: '0 0 26px'
+        }
+      }
+    },
+    MuiAccordionSummary: {
+      styleOverrides: {
+        root: {
+          padding:'26px 0',
+          borderTop: '1px',
+          borderBottom: '1px',
+          borderColor: '#151E41',
+          minHeight: 'auto',
+
+          '.MuiAccordionSummary-content': {
+            margin: 0
+          },
+          
+          '&.Mui-expanded .MuiAccordionSummary-content': {
+            margin: 0,
+          },
+
+          '&.Mui-expanded': {
+            minHeight: 'auto',
+          }
+        }
+      }
+    },
+    MuiList:{
+      styleOverrides: {
+        root: {
+          paddingBottom: 0,
+          paddingTop: 0,
+
+          '&.list-square': {
+            paddingBottom: 0,
+            marginBottom: '40px',
+            paddingTop: 0,
+            marginTop: '8px',
+          }
+        }
+      }
+    },
+    MuiListItem:{
+      styleOverrides: {
+        root: {
+          padding: 0,
+          marginBottom: '11px',
+
+          '.MuiSvgIcon-root': {
+            marginRight: '7px'
+          },
+          '&:last-child': {
+            marginBottom: 0,
+          }
+        }
+      }
+    },
     MuiAppBar: {
       styleOverrides: {
         root: {
@@ -216,11 +372,14 @@ export const theme = createTheme({
         }
       }
     },
-    MuiInputBase:{
+    MuiAccordion: {
       styleOverrides: {
         root: {
-          '.MuiInputBase-input::placeholder' : {
-            opacity: '1 !important',
+          boxShadow: 'none',
+          padding: '0 20px',
+
+          '&:before': {
+            display: 'none'
           }
         }
       }
@@ -240,7 +399,7 @@ export const theme = createTheme({
       900: '#1F2339'
     },
     action: {
-      active: '#6B7280',
+      active: '#FFFFFF',
       focus: 'rgba(55, 65, 81, 0.12)',
       hover: 'rgba(55, 65, 81, 0.04)',
       selected: 'rgba(55, 65, 81, 0.08)',
@@ -263,6 +422,13 @@ export const theme = createTheme({
       light: '#3FC79A',
       dark: '#0B815A',
       contrastText: '#FFFFFF'
+    },
+    default: {
+      main: '#23273A',
+      active: '#FFFFFF',
+      light: '#FFFFFF',
+      dark: '#FFFFFF',
+      contrastText: '#FFFFFF',
     },
     success: {
       main: '#14B8A6',
@@ -293,6 +459,9 @@ export const theme = createTheme({
       secondary: '#A1A6BE',
       disabled: 'rgba(55, 65, 81, 0.48)',
       textTransform: 'none'
+    },
+    notification:{
+      main: '#FF8991'
     }
   },
   shape: {
@@ -331,9 +500,9 @@ export const theme = createTheme({
     },
     fontFamily: '"Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"',
     body1: {
-      fontSize: '1rem',
+      fontSize: '14px',
       fontWeight: 400,
-      lineHeight: 1.5
+      lineHeight: '19px'
     },
     body2: {
       fontSize: '0.875rem',
@@ -354,12 +523,27 @@ export const theme = createTheme({
     body5: {
       fontSize: '14px',
       lineHeight: '19px',
-      fontWeight: 400
+      fontWeight: 700
     },
     body6: {
       fontSize: '14px',
       lineHeight: '19px',
       fontWeight: 600
+    },
+    body7: {
+      fontSize: '14px',
+      lineHeight: '19px',
+      fontWeight: 600
+    },
+    body8: {
+      fontSize: '12px',
+      lineHeight: '16px',
+      fontWeight: 300
+    },
+    body9: {
+      fontSize: '9px',
+      lineHeight: '16px',
+      fontWeight: 400
     },
     subtitle1: {
       fontSize: '14px',

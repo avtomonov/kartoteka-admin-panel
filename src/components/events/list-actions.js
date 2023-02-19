@@ -1,4 +1,4 @@
-import { Card, Button, CardContent, List } from '@mui/material';
+import { Card, Button, CardContent, List, Typography } from '@mui/material';
 import PropTypes from 'prop-types';
 
 export const ListActions = (props) => {
@@ -7,11 +7,26 @@ export const ListActions = (props) => {
     return (
         <Card>      
             <CardContent>
-                <List>
+                <List className="list-actions">
                     {list.map((item, index) => (
-                        <li key={index}>
-                            {item.title}
-                            <Button href={item.href}>Сформировать</Button>
+                        <li className="list-actions__item" key={index}>
+                            <Typography
+                                color="textPrimary"
+                                variant="body5"
+                            >
+                                {item.title}
+                            </Typography>
+
+                            <div className="list-actions__delimetr"></div>  
+                            
+                            <Button 
+                                type="submit" 
+                                variant="contained" 
+                                color="default" 
+                                size="default"
+                                fontSize="medium"
+                                href={item.href}
+                            >Сформировать</Button>
                         </li>
                     ))}
                 </List>

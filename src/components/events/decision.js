@@ -28,7 +28,6 @@ const controlTypes = [
     }
 ];
 
-
 const controlMethods = [
     {
       value: 'fact',
@@ -59,12 +58,17 @@ export const Decision = (props) => {
                         label="Решение о проведении поверки"
                         placeholder="Введите текст"
                         multiline
-                        maxRows={4}
+                        rows={2}
+                        maxRows={2}
                         fullWidth
                         variant="filled"
                         focused 
                     />
-                    <Divider/>
+                    <Divider
+                        sx={{
+                            margin: '14px 0 26px'
+                        }}
+                    />
                     <TextField  
                         id="organization"
                         label="Организация"
@@ -80,6 +84,7 @@ export const Decision = (props) => {
                         defaultValue="plans"
                         fullWidth
                         variant="filled"
+                        focused 
                     >
                         {controls.map((option) => (
                             <MenuItem key={option.value} value={option.value}>
@@ -94,6 +99,7 @@ export const Decision = (props) => {
                         defaultValue="out"
                         fullWidth
                         variant="filled"
+                        focused 
                     >
                         {controlTypes.map((option) => (
                             <MenuItem key={option.value} value={option.value}>
@@ -108,6 +114,7 @@ export const Decision = (props) => {
                         defaultValue="fact"
                         fullWidth
                         variant="filled"
+                        focused 
                     >
                         {controlMethods.map((option) => (
                             <MenuItem key={option.value} value={option.value}>
@@ -119,10 +126,10 @@ export const Decision = (props) => {
                     <TextField
                         id="control-period"
                         label="Сроки проведения проверки"
-                        dataType
                         defaultValue="02.08.2020 - 05.08.2020"
                         fullWidth
                         variant="filled"
+                        focused 
                     />
 
                     <TextField
@@ -131,6 +138,7 @@ export const Decision = (props) => {
                         defaultValue="г. Москва, Лененский пр-т 178, к4"
                         fullWidth
                         variant="filled"
+                        focused 
                     >
                         {controlMethods.map((option) => (
                             <MenuItem key={option.value} value={option.value}>
@@ -139,7 +147,22 @@ export const Decision = (props) => {
                         ))}
                     </TextField>
 
-                    <Button type="submit" variant="outlined">Написать</Button>
+                    {/* TODO create form footer component */}
+                    <Box
+                        sx={{
+                            display: 'flex',
+                            justifyContent: 'center',
+                            margin: '20px 0 4px'
+                        }}
+                    >
+                        <Button 
+                            type="submit" 
+                            variant="contained" 
+                            color="default" 
+                            size="default"
+                            fontSize="medium"
+                        >Написать</Button>
+                    </Box>
                 </Box>
             </CardContent>
         </Card>

@@ -1,4 +1,4 @@
-import { Card, CardContent, CardHeader } from '@mui/material';
+import { Card, CardContent, CardHeader, Divider } from '@mui/material';
 import { SimpleAccordion } from '../ui/simple-accordion';
 import PropTypes from 'prop-types';
 
@@ -7,13 +7,30 @@ export const Structure = (props) => {
   
     return (
         <Card>      
-            <CardContent>
+            <CardContent
+                sx={{
+                    paddingBottom: 0,
+                    paddingTop: '33px',
+                    '&:last-child': {
+                        paddingBottom: 0,
+                    }
+                }}
+            >
                 <CardHeader
                     component="h2"
                     title="Структура предприятия"
+                    titleTypographyProps={{
+                        variant: "body5"
+                    }}
+                    sx={{
+                        marginBottom: '33px'
+                    }}
                 />
                     {structures.map((item, index) => (
-                        <SimpleAccordion key={index} item={item} />
+                        <div key={index}>
+                            <Divider/>
+                            <SimpleAccordion item={item} />
+                        </div>
                     ))}
             </CardContent>
         </Card>
