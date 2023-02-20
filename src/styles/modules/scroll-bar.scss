@@ -1,3 +1,31 @@
-.ps__rail-y {
+
+.MuiBox-root .ps__rail-y {
     opacity: 1;
+    background-color: #eee;
+}
+
+.MuiBox-root .ps--active-y > .ps__rail-y {
+    opacity: 1;
+    background-color: #eee;
+    background: #3E4459;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 15px;
+    z-index: 2;
+}
+
+.MuiBox-root .ps__rail-y:hover {
+    background-color: #3E4459;
+    opacity: 1;
+}
+
+.ps__rail-y:hover > .ps__thumb-y, .ps__rail-y:focus > .ps__thumb-y, .ps__rail-y.ps--clicking .ps__thumb-y {
+    background: #23273A;
+    border-radius: 6px;
+    cursor: grab;
+}
+
+.ps__thumb-y {
+    background-color: #23273A;
+    width: 11px;
 }

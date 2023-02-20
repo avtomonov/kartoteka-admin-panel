@@ -87,11 +87,12 @@ export const Statistics = (props) => {
                   position: 'relative',
                   marginTop: {
                     x: '-12px',
-                    lx: 0
+                    lx: 0,
                   },
                   marginBottom: {
                     x: '-12px',
-                    lx: 0
+                    lx: 0,
+                    xl: 0
                   }
                 }}
               >

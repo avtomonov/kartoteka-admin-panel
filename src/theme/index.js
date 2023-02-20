@@ -22,7 +22,7 @@ export const theme = createTheme({
         root: {
           textTransform: 'none',
           borderRadius: '10px',
-          color: '#43E8FF',
+          // color: '#43E8FF',  
           fontWeight: 400,
           justifyContent: 'flex-start',
           minWidth: 'auto',
@@ -211,22 +211,22 @@ export const theme = createTheme({
             padding: '6px 10px',
 
             '&:focus': {
-              background: '#43E8FF',
+              background: '#23273A',
               borderRadius: '4px',
-              color: '#23273A',
+              color: '#FFFFFF',
 
               '+ input + .MuiSvgIcon-root': {
-                color: '#23273A',
+                color: '#FFFFFF',
               }
             },
 
             '&[aria-expanded="true"]': {
-              background: '#43E8FF',
+              background: '#23273A',
               borderRadius: '4px',
-              color: '#23273A',
+              color: '#FFFFFF',
 
               '+ input + .MuiSvgIcon-root': {
-                color: '#23273A',
+                color: '#FFFFFF',
                 transform: 'rotate(180deg)'
               }
             }
@@ -529,10 +529,17 @@ export const theme = createTheme({
     },
     default: {
       main: '#23273A',
-      active: '#FFFFFF',
+      active: '#43E8FF',
+      light: '#43E8FF',
+      dark: '#43E8FF',
+      contrastText: '#43E8FF',
+    },
+    white: {
+      main: '#FFFFFF',
+      active: '#23273A',
       light: '#FFFFFF',
       dark: '#FFFFFF',
-      contrastText: '#FFFFFF',
+      contrastText: '#23273A',
     },
     success: {
       main: '#14B8A6',
@@ -561,6 +568,7 @@ export const theme = createTheme({
     text: {
       primary: '#FFFFFF',
       secondary: '#A1A6BE',
+      contrast: '#43E8FF',
       disabled: 'rgba(55, 65, 81, 0.48)',
       textTransform: 'none'
     },
@@ -653,6 +661,11 @@ export const theme = createTheme({
       fontSize: '12px',
       lineHeight: '16px',
       fontWeight: 400
+    },
+    body11: {
+      fontSize: '16px',
+      lineHeight: '22px',
+      fontWeight: 600
     },
     subtitle1: {
       fontSize: '14px',

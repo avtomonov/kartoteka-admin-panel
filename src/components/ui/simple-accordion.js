@@ -48,7 +48,7 @@ export const SimpleAccordion = (props) => {
       <AccordionDetails>
           <Box>
             <Typography component="p">{ item.head.title }</Typography>
-            <Typography variant="body8" component="p">{ item.head.contractTime }</Typography>
+            <Typography variant="body9" component="p">{ item.head.contractTime }</Typography>
           </Box>
 
           <Box
