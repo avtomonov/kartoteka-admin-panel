@@ -336,6 +336,16 @@ export const theme = createTheme({
             paddingBottom: 10,
             paddingLeft: 11,
             paddingRight: 12,
+
+            '.table-full &:first-child': {
+              paddingLeft: 0
+            },
+
+            '.table-full &:last-child': {
+              paddingRight: 6,
+              paddingLeft: 8,
+              width: '43px'
+            }
           },
           '& .MuiTableCell-paddingCheckbox': {
             paddingTop: 4,
@@ -343,7 +353,7 @@ export const theme = createTheme({
           },
           '.MuiTableRow-root:last-child .MuiTableCell-root': {
             borderBottom: '1px solid #151E41'
-          }
+          },
         }
       }
     },
@@ -362,6 +372,21 @@ export const theme = createTheme({
           '&:last-child': {
             borderRight: 'none',
           },
+
+          '.table-full &' :{
+            paddingLeft: 28,
+            paddingBottom: 10,
+
+            '&:first-child': {
+              paddingLeft: 0
+            },
+
+            '&:last-child': {
+              paddingRight: 6,
+              paddingLeft: 8,
+              width: '43px'
+            }
+          }
         }
       }
     },
@@ -412,7 +437,7 @@ export const theme = createTheme({
 
           '&.list-square': {
             paddingBottom: 0,
-            marginBottom: '40px',
+            marginBottom: '24px',
             paddingTop: 0,
             marginTop: '8px',
           }
@@ -620,7 +645,12 @@ export const theme = createTheme({
       fontWeight: 300
     },
     body9: {
-      fontSize: '9px',
+      fontSize: '12px',
+      lineHeight: '16px',
+      fontWeight: 400
+    },
+    body10: {
+      fontSize: '12px',
       lineHeight: '16px',
       fontWeight: 400
     },

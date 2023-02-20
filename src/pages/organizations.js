@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { Box, Container } from '@mui/material';
-import { OrganizationListResults } from '../components/customer/customer-list-results';
+import { OrganizationListResults } from '../components/organization/organization-list-results';
 import { DashboardLayout } from '../components/dashboard-layout';
 import { organizations } from '../__mocks__/organizations';
 

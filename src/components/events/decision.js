@@ -1,7 +1,6 @@
 import { Card, Box, TextField, CardContent, Divider, MenuItem, Button } from '@mui/material';
 import { ArrowDown as ArrowDownIcon } from '../../icons/arrow-down';
 
-
 const controls = [
     {
         value: 'plans',
@@ -45,11 +44,7 @@ export const Decision = (props) => {
     }
   
     return (
-        <Card
-            sx={{
-                flex: '1',
-            }}
-        >      
+        <Card>      
             <CardContent
                 className="card-variant"
             >
@@ -156,11 +151,13 @@ export const Decision = (props) => {
                         variant="filled"
                         focused 
                         sx={{
-                            textAlign: 'center',
                             maxWidth: {
                                 xs: '100%',
                                 md: '194px'
-                            }
+                            },
+                           'input':{
+                                textAlign: 'center',
+                           }
                         }}
                     />
 

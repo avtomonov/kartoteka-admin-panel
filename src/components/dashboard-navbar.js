@@ -137,7 +137,7 @@ export const DashboardNavbar = (props) => {
               <Grid item>
                 <Tooltip 
                   component="a"
-                  href="#" 
+                  href="#TODO" 
                   title="Добавить виджет"
                 >
                   <IconButton sx={{ 
@@ -154,7 +154,7 @@ export const DashboardNavbar = (props) => {
 
                 <Tooltip 
                   component="a"
-                  href="#" 
+                  href="#TODO" 
                   title="Настройки"
                 >
                   <IconButton sx={{ ml: 1, 

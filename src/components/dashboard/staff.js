@@ -58,7 +58,7 @@ export const Staff = (props) => (
           divider={i < users.length - 1}
           key={user.id}
           sx={{
-            paddingBottom: '4px',
+            marginBottom: '15px',
             paddingLeft: '0',
             paddingRight: '0',
             display: 'flex',

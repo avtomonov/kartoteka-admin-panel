@@ -9,7 +9,7 @@ import {
 } from '@mui/material';
 
 import { ListSquare } from '../list-square';
-
+import { Star as StarIcon } from '../../icons/star';
 
 const listItems = [
   {
@@ -23,7 +23,17 @@ const listItems = [
 export const RentChart = (props) => (
   <Card {...props}>
     <CardContent>
-      <CardHeader title="Арендуемая техника" component="h2"/>
+      <Box sx={{
+        display: 'flex',
+        alignItems: 'center',
+        '.MuiSvgIcon-root': {
+          fontSize: '16px',
+          marginLeft: '16px'
+        }
+      }}>
+        <CardHeader title="Арендуемая техника" component="h2"/>
+        <StarIcon />
+      </Box>
 
       <Typography
         color="textPrimary"
@@ -49,7 +59,7 @@ export const RentChart = (props) => (
               '& img': {
                 width: {
                   xs: '100%',
-                  x: 'calc(100vw / 1440 * 313)'
+                  x: 'calc(100vw / 1440 * 294)'
                 },
                 height: 'auto',
                 marginTop: {
@@ -60,7 +70,7 @@ export const RentChart = (props) => (
                 },
                 marginLeft: {
                   md: '0',
-                  x: '-17px'
+                  x: '0'
                 },
                 marginBottom: {
                   xs: '40px',

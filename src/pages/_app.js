@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import 'react-perfect-scrollbar/dist/css/styles.css';
 import '../styles/common.css';
 
 import { CacheProvider } from '@emotion/react';
@@ -7,7 +8,6 @@ import { ThemeProvider } from '@mui/material/styles';
 import { createEmotionCache } from '../utils/create-emotion-cache';
 import { registerChartJs } from '../utils/register-chart-js';
 import { theme } from '../theme';
-import 'react-perfect-scrollbar/dist/css/styles.css';
 
 registerChartJs();
 
