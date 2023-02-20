@@ -175,29 +175,31 @@ export const DashboardNavbar = (props) => {
 
               <Grid item>
 
-                {active == '/events' &&
-                   <Button 
-                      variant="contained" 
-                      color="white" 
-                      size="default"
-                      fontSize="medium"
-                      href="#TODO"
-                      sx={{
-                        marginRight: '10px',
-                        display: {
-                          xs: 'none',
-                          lg: 'inline-block'
-                        }
-                      }}
-                  >Материалы проверки</Button>
-                }
+   
                 <Box
                   sx={{
-                    display: 'flex'
+                    display: 'flex',
+                    alignItems: 'center'
                   }}
                 >
-                  {active == '/organizations' &&
+                  {active == '/events' &&
+                    <Button 
+                        variant="contained" 
+                        color="white" 
+                        size="default"
+                        fontSize="medium"
+                        href="#TODO"
+                        sx={{
+                          marginRight: '10px',
+                          display: {
+                            xs: 'none',
+                            lg: 'flex'
+                          }
+                        }}
+                    >Материалы проверки</Button>
+                  }
 
+                  {active == '/organizations' &&
                     <Box sx={{ 
                       display: {
                         xs: 'none',
